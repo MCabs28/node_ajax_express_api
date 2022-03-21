@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<script src="js/jquery.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.js"></script>
+    <title>REST API (Node, Express, Ajax)</title>
+</head>
+<body>
+
+
+  <h3 class="text-center mt-3 text-white">Simple REST API CRUD Using Node.JS and Express</h3>
+	<div class="container">
+        
+      <div class="mx-auto my-auto w-50 pt-5">
+              <form id="createForm"  method="POST" class="bg-primary border-danger rounded p-4"> 
+                <div class="form-group">
+                    <label class="text-white font-weight-bold">ID</label>
+                    <input type="number" name="id" placeholder="Ex. 12345" class="form-control form-control-sm w-100">
+                </div>
+
+                <div class="form-group">
+                    <label class="text-white font-weight-bold">Full Name</label>
+                    <input name="fullname" placeholder="Ex. Mark Cabael" class="form-control form-control-sm w-100">
+                </div>
+
+                <div class="form-group">
+                    <label class=" text-white font-weight-bold">Motto</label>
+                    <input name="motto" placeholder="Ex. Time is Gold" class="form-control form-control-sm w-100">
+                </div>
+
+                <button type="submit" class="btn btn-success" id="createValue"><i class="fa fa-plus"></i> Add</button>
+            </form>
+      </div><!--end of auto-->
+      
+	</div><!--end of container-->
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 <!-- MODAL -->
+	 <div class="container mt-4 mb-3">
+        
+        <h3 class="text-center text-light">Data</h3>
+        <div class="row " id="students">
+        <!-- The Modal -->
+        <div class="modal fade" id="editStudentModal">
+          <div class="modal-dialog w-25">
+            <class class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Edit your Data</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+              </div>
+              
+              <div class="modal-body">
+                <form id="editForm" method="POST">
+                    <div class="form-group">
+                        <label class="font-weight-bold">ID</label>
+                        <input name="id" id="id" class="form-control form-control-sm w-100" disabled="disabled">
+                    </div>
+        
+                    <div class="form-group">
+                        <label class="font-weight-bold">Full Name</label>
+                        <input name="fullname" id="fullname" class="form-control form-control-sm w-100">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold">Motto</label>
+                        <input name="motto" id="motto" class="form-control form-control-sm w-100">
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Saved</button>
+                </form>
+        </div>
+              
+            </div> <!--end of modal-content-->
+          </div> <!--end of modal-dialog-->
+        </div><!--end of modal-fade-->
+      </div><!--end of container-->
+
+    <script src="student-list.js"></script>
+
+
+    
+</body>
+</html>
