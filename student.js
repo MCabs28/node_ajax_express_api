@@ -19,13 +19,7 @@ let student = [
     },
 
     {
-        "id": "67890",
-        "fullname": "Levi Ackerman",
-        "motto": "Give up on your dreams and die."
-    },
-
-    {
-        "id": "28282",
+        "id": "28122",
         "fullname": "Mark Cabael",
         "motto": "Time is Gold"
     }

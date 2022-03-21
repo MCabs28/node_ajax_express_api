@@ -49,7 +49,7 @@ const loadStudents = () => {
 
             for(let item=0; item<res.student.length; item++){
                 const modalValue = `
-            <div class="mt-4 col-md-4 col-sm-12">
+            <div class="mt-4 col-md-6 col-sm-12">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${res.student[item].fullname}</h5>
