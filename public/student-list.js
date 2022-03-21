@@ -1,7 +1,7 @@
 const createValue = document.querySelector('#createValue')
 
 createValue.addEventListener('click', e =>{
-    document.getElementById('createForm').action = `http://localhost:8080/student`;
+    document.getElementById('createForm').action = `https://cabs-rest-api-ajax.herokuapp.com/student`;
 })
     
 
@@ -16,10 +16,10 @@ const editModalInfo = (id) => {
             let fullnames = document.getElementById('fullname').value = `${res.collection.fullname}`
             let mottos = document.getElementById('motto').value = `${res.collection.motto}`
 
-            document.getElementById('editForm').action = `http://localhost:8080/students/${id}`;
+            document.getElementById('editForm').action = `https://cabs-rest-api-ajax.herokuapp.com/students/${id}`;
             }
         }
-        xhttp.open("GET", `http://localhost:8080/student/${id}`, false);
+        xhttp.open("GET", `https://cabs-rest-api-ajax.herokuapp.com/student/${id}`, false);
         xhttp.send()
     }
     
@@ -29,7 +29,7 @@ const deleteStudent = (id) => {
     let x =  window.confirm("Are you sure do you want to delete this student?")
     if(x === true){
         const xhttp = new XMLHttpRequest();
-        xhttp.open("DELETE", `http://localhost:8080/students/${id}`, false);
+        xhttp.open("DELETE", `https://cabs-rest-api-ajax.herokuapp.com/students/${id}`, false);
         xhttp.send();
     }
 
@@ -38,7 +38,7 @@ const deleteStudent = (id) => {
 
 const loadStudents = () => {
     const xhttp = new XMLHttpRequest();
-    const url = new URL('http://localhost:8080/student')
+    const url = new URL('https://cabs-rest-api-ajax.herokuapp.com/student')
 
 
     xhttp.onreadystatechange = function(){
